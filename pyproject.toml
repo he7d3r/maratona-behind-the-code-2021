@@ -13,6 +13,7 @@ jupyterlab = "^3.2.3"
 seaborn = "^0.11.2"
 scikit-learn = "^1.0.1"
 ibm-watson-machine-learning = "^1.0.173"
+black = "^21.10b0"
 
 [tool.poetry.dev-dependencies]
 

@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "maratona-behind-the-code-2021"
+version = "0.1.0"
+description = ""
+authors = ["Helder Geovane Gomes de Lima <he7d3r@gmail.com>"]
+license = "Apache License 2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pandas = ">=1.2.5"
+matplotlib = "^3.4.3"
+jupyterlab = "^3.2.3"
+seaborn = "^0.11.2"
+scikit-learn = "^1.0.1"
+ibm-watson-machine-learning = "^1.0.173"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

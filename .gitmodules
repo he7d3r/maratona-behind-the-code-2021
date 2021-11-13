@@ -1,0 +1,3 @@
+[submodule "1-bantotal/desafio"]
+	path = 1-bantotal/desafio
+	url = git@github.com:maratonadev/desafio-1-2021.git

@@ -1,3 +1,6 @@
 [submodule "1-bantotal/desafio"]
 	path = 1-bantotal/desafio
 	url = git@github.com:maratonadev/desafio-1-2021.git
+[submodule "1-bantotal/solução/custom_sklearn_transformers"]
+	path = 1-bantotal/solução/custom_sklearn_transformers
+	url = git@github.com:he7d3r/custom_sklearn_transformers.git

@@ -154,6 +154,17 @@ python-versions = ">=3.6"
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
 [[package]]
+name = "cloudant"
+version = "2.15.0"
+description = "Cloudant / CouchDB Client Library"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+requests = ">=2.7.0,<3.0.0"
+
+[[package]]
 name = "colorama"
 version = "0.4.4"
 description = "Cross-platform colored terminal text."
@@ -1196,7 +1207,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "2c22a60306364e1729f04067a1b32caf2c911d84df4170cea4c49f0a5ba60b4f"
+content-hash = "3974d55d14e89c4b5323c3ac9969379e572e3c1217a1b4e1e3ae30e775ac38b7"
 
 [metadata.files]
 anyio = [
@@ -1303,6 +1314,10 @@ charset-normalizer = [
 click = [
     {file = "click-8.0.3-py3-none-any.whl", hash = "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3"},
     {file = "click-8.0.3.tar.gz", hash = "sha256:410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"},
+]
+cloudant = [
+    {file = "cloudant-2.15.0-py3-none-any.whl", hash = "sha256:158ce109eb6f5c31739a4169061e33fb0ad9bd1545395162e111e696fa5916e2"},
+    {file = "cloudant-2.15.0.tar.gz", hash = "sha256:ac2f5136e4f8fba5c838643603b5272c5cfb6ed2240edb580fe3c2c5a5fcda63"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},

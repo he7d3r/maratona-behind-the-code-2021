@@ -1,0 +1,114 @@
+[
+    {
+        "id": "a9c6455d.00ed88",
+        "type": "tab",
+        "label": "2-quanam",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d8a5fda6.61cbe",
+        "type": "mqtt in",
+        "z": "a9c6455d.00ed88",
+        "name": "",
+        "topic": "quanam",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "d4c0a948.ee6c88",
+        "x": 80,
+        "y": 240,
+        "wires": [
+            [
+                "c0a4f8fc.f1acc8"
+            ]
+        ]
+    },
+    {
+        "id": "c0a4f8fc.f1acc8",
+        "type": "json",
+        "z": "a9c6455d.00ed88",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 230,
+        "y": 240,
+        "wires": [
+            [
+                "ffe3ac06.b126a"
+            ]
+        ]
+    },
+    {
+        "id": "e0d36e98.ceeb1",
+        "type": "cloudant out",
+        "z": "a9c6455d.00ed88",
+        "name": "",
+        "cloudant": "",
+        "database": "quanam-iot",
+        "service": "hd-node-red-mbtc-cloudant-1599416975874-67062",
+        "payonly": true,
+        "operation": "insert",
+        "x": 570,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ffe3ac06.b126a",
+        "type": "function",
+        "z": "a9c6455d.00ed88",
+        "name": "",
+        "func": "var fetchedIds = flow.get( 'fetchedIds' ) || {};\nif ( msg.payload.ID in fetchedIds ) {\n    return null;\n} else {\n    fetchedIds[msg.payload.ID] = true;\n    flow.set( 'fetchedIds', fetchedIds );\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "47f32cb2.3fcfe4",
+                "e0d36e98.ceeb1"
+            ]
+        ]
+    },
+    {
+        "id": "47f32cb2.3fcfe4",
+        "type": "debug",
+        "z": "a9c6455d.00ed88",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d4c0a948.ee6c88",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "MQTT para sensores de IoT da Quanam",
+        "broker": "iot.maratona.dev",
+        "port": "31666",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]

@@ -50,6 +50,9 @@ def get_acceptable_illumination_levels():
 
 def main(sensor_data):
     result = {"alerts": []}
+    if "room" not in sensor_data or "values" not in sensor_data:
+        return result
+
     room = sensor_data["room"]
     acceptable_levels = {
         "co2": get_acceptable_co2_levels(),

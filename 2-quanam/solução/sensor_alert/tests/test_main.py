@@ -3,6 +3,7 @@ from src.main import (
     get_acceptable_co2_levels,
     get_acceptable_temperature_levels,
     get_acceptable_humidity_levels,
+    get_acceptable_sound_levels,
 )
 
 
@@ -111,3 +112,40 @@ def test_main_validates_humidity():
     data["values"]["humidity"] = 61
     result = main(data)
     assert "humidity" in result["alerts"]
+
+
+def test_sound_settings():
+    result = get_acceptable_sound_levels()
+    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
+    for key in keys:
+        assert key in result
+        assert "min" in result[key]
+        assert "max" in result[key]
+
+
+def test_main_validates_sound():
+    data = {
+        "room": "garden",
+        "values": {
+            "co2": 0,
+            "temperature": 0,
+            "humidity": 0,
+            "sound": 9,
+            "illumination": 0,
+        },
+    }
+    result = main(data)
+    assert "alerts" in result
+    assert "sound" in result["alerts"]
+
+    data["values"]["sound"] = 10
+    result = main(data)
+    assert "sound" not in result["alerts"]
+
+    data["values"]["sound"] = 35
+    result = main(data)
+    assert "sound" not in result["alerts"]
+
+    data["values"]["sound"] = 36
+    result = main(data)
+    assert "sound" in result["alerts"]

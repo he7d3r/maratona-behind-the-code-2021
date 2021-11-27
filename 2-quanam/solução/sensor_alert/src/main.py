@@ -28,6 +28,16 @@ def get_acceptable_humidity_levels():
     }
 
 
+def get_acceptable_sound_levels():
+    return {
+        "activity-room": {"min": 0, "max": 40},
+        "refectory": {"min": 20, "max": 35},
+        "room-1": {"min": 10, "max": 30},
+        "bathroom-main": {"min": 20, "max": 35},
+        "garden": {"min": 10, "max": 35},
+    }
+
+
 def main(sensor_data):
     result = {"alerts": []}
     room = sensor_data["room"]
@@ -35,6 +45,7 @@ def main(sensor_data):
         "co2": get_acceptable_co2_levels(),
         "temperature": get_acceptable_temperature_levels(),
         "humidity": get_acceptable_humidity_levels(),
+        "sound": get_acceptable_sound_levels(),
     }
     for sensor_name, levels in acceptable_levels.items():
         acceptable = levels[room]

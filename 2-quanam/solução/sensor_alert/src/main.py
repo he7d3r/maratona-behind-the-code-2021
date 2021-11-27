@@ -7,6 +7,7 @@ def get_acceptable_co2_levels():
         "garden": {"min": None, "max": 500},
     }
 
+
 def get_acceptable_temperature_levels():
     return {
         "activity-room": {"min": 19, "max": 22},
@@ -16,20 +17,32 @@ def get_acceptable_temperature_levels():
         "garden": {"min": 15, "max": 22},
     }
 
+
+def get_acceptable_humidity_levels():
+    return {
+        "activity-room": {"min": 50, "max": 60},
+        "refectory": {"min": 50, "max": 70},
+        "room-1": {"min": 50, "max": 60},
+        "bathroom-main": {"min": 60, "max": 75},
+        "garden": {"min": 50, "max": 80},
+    }
+
+
 def main(sensor_data):
     result = {"alerts": []}
     room = sensor_data["room"]
     acceptable_levels = {
         "co2": get_acceptable_co2_levels(),
-        "temperature": get_acceptable_temperature_levels()
+        "temperature": get_acceptable_temperature_levels(),
+        "humidity": get_acceptable_humidity_levels(),
     }
     for sensor_name, levels in acceptable_levels.items():
         acceptable = levels[room]
         sensor_level = sensor_data["values"][sensor_name]
 
-        if (
-            acceptable["min"] is not None and sensor_level < acceptable["min"]
-        ) or (acceptable["max"] is not None and sensor_level > acceptable["max"]):
+        if (acceptable["min"] is not None and sensor_level < acceptable["min"]) or (
+            acceptable["max"] is not None and sensor_level > acceptable["max"]
+        ):
             result["alerts"].append(sensor_name)
 
     return result

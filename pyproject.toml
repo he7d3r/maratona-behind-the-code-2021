@@ -16,6 +16,7 @@ ibm-watson-machine-learning = "^1.0.173"
 black = "^21.10b0"
 python-dotenv = "^0.19.2"
 cloudant = "^2.15.0"
+pytest = "^6.2.5"
 
 [tool.poetry.dev-dependencies]
 

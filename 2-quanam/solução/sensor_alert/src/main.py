@@ -3,6 +3,11 @@ class ClosedInterval:
         self.min = min
         self.max = max
 
+    def contains(self, value):
+        return (self.min is None or self.min <= value) and (
+            self.max is None or self.max >= value
+        )
+
 
 def get_acceptable_co2_levels():
     return {
@@ -68,12 +73,10 @@ def main(sensor_data):
         "illumination": get_acceptable_illumination_levels(),
     }
     for sensor_name, levels in acceptable_levels.items():
-        acceptable = levels[room]
+        interval = levels[room]
         sensor_level = sensor_data["values"][sensor_name]
 
-        if (acceptable.min is not None and sensor_level < acceptable.min) or (
-            acceptable.max is not None and sensor_level > acceptable.max
-        ):
+        if not interval.contains(sensor_level):
             result["alerts"].append(sensor_name)
 
     return result

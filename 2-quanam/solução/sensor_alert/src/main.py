@@ -8,6 +8,9 @@ class ClosedInterval:
             self.max is None or self.max >= value
         )
 
+    def __repr__(self) -> str:
+        return f"ClosedInterval({self.min}, {self.max})"
+
 
 class Sensor:
     def __init__(self, interval, value=None) -> None:
@@ -18,6 +21,9 @@ class Sensor:
         if self.value is None:
             raise ValueError(f"Sensor value missing")
         return self.interval.contains(self.value)
+
+    def __repr__(self) -> str:
+        return f"Sensor({self.interval}, {self.value})"
 
 
 class Location:

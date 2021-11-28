@@ -1,4 +1,5 @@
 from src.main import (
+    ClosedInterval,
     main,
     get_acceptable_co2_levels,
     get_acceptable_temperature_levels,
@@ -37,8 +38,7 @@ def test_co2_settings():
     keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
     for key in keys:
         assert key in result
-        assert "min" in result[key]
-        assert "max" in result[key]
+        isinstance(result[key], ClosedInterval)
 
 
 def test_temperature_settings():
@@ -46,8 +46,7 @@ def test_temperature_settings():
     keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
     for key in keys:
         assert key in result
-        assert "min" in result[key]
-        assert "max" in result[key]
+        isinstance(result[key], ClosedInterval)
 
 
 def test_main_validates_temperature():
@@ -83,8 +82,7 @@ def test_humidity_settings():
     keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
     for key in keys:
         assert key in result
-        assert "min" in result[key]
-        assert "max" in result[key]
+        isinstance(result[key], ClosedInterval)
 
 
 def test_main_validates_humidity():
@@ -120,8 +118,7 @@ def test_sound_settings():
     keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
     for key in keys:
         assert key in result
-        assert "min" in result[key]
-        assert "max" in result[key]
+        isinstance(result[key], ClosedInterval)
 
 
 def test_main_validates_sound():
@@ -157,8 +154,7 @@ def test_illumination_settings():
     keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
     for key in keys:
         assert key in result
-        assert "min" in result[key]
-        assert "max" in result[key]
+        isinstance(result[key], ClosedInterval)
 
 
 def test_main_validates_illumination():

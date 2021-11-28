@@ -1,11 +1,10 @@
+import pytest
 from src.main import (
     ClosedInterval,
+    Location,
+    Sensor,
+    get_location_sensors,
     main,
-    get_acceptable_co2_levels,
-    get_acceptable_temperature_levels,
-    get_acceptable_humidity_levels,
-    get_acceptable_sound_levels,
-    get_acceptable_illumination_levels,
 )
 
 
@@ -41,121 +40,69 @@ def test_closed_interval_none():
     assert interval.contains(9999)
 
 
-def test_main_validates_co2():
-    data = {
-        "room": "bathroom-main",
-        "values": {
-            "co2": 0,
-            "temperature": 0,
-            "humidity": 0,
-            "sound": 0,
-            "illumination": 0,
+def test_sensor_has_acceptable_value():
+    sensor = Sensor(ClosedInterval(min=111, max=333))
+
+    with pytest.raises(ValueError):
+        sensor.has_acceptable_value()
+
+    sensor.value = 222
+    assert sensor.has_acceptable_value()
+
+    sensor.value = 444
+    assert not sensor.has_acceptable_value()
+
+
+def test_location_get_alerts():
+    room = Location(
+        {
+            "foo": Sensor(ClosedInterval(min=10, max=20)),
+            "bar": Sensor(ClosedInterval(min=None, max=20), value=42),
         },
-    }
-    result = main(data)
-    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
-    assert set(result["alerts"]).issubset(set(all_sensors))
+    )
+
+    room.sensors["foo"].value = 15
+    assert room.get_alerts() == ["bar"]
+
+    room.sensors["foo"].value = 21
+    assert room.get_alerts() == ["foo", "bar"]
+
+    room.sensors["foo"].value = 9
+    assert room.get_alerts() == ["foo", "bar"]
 
 
-def test_co2_settings():
-    result = get_acceptable_co2_levels()
-    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
-    for key in keys:
-        assert key in result
-        isinstance(result[key], ClosedInterval)
+def test_get_location_sensors():
+    result = get_location_sensors()
+    all_rooms = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
+
+    assert set(result.keys()) == set(all_rooms)
+
+    all_sensor_kinds = ["humidity", "illumination", "temperature", "sound", "co2"]
+    for room in all_rooms:
+        assert isinstance(result[room], Location)
+        assert set(result[room].sensors.keys()) == set(all_sensor_kinds)
 
 
-def test_temperature_settings():
-    result = get_acceptable_temperature_levels()
-    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
-    for key in keys:
-        assert key in result
-        isinstance(result[key], ClosedInterval)
+def test_main_invalid_data():
+    no_alerts = {"alerts": []}
+
+    assert main({}) == no_alerts
+    assert main({"room": "bathroom-main"}) == no_alerts
+    assert main({"room": "bathroom-main", "values": {}}) == no_alerts
+    assert main({"foo": "bar", "baz": 42}) == no_alerts
 
 
-def test_main_validates_temperature():
+def test_main_valid_data():
     data = {
         "room": "refectory",
         "values": {
-            "co2": 0,
-            "temperature": 19,
-            "humidity": 0,
-            "sound": 0,
-            "illumination": 0,
+            "co2": 999,
+            "temperature": -2,
+            "humidity": -3,
+            "sound": -4,
+            "illumination": -5,
         },
     }
     result = main(data)
     all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
-    assert set(result["alerts"]).issubset(set(all_sensors))
-
-
-def test_humidity_settings():
-    result = get_acceptable_humidity_levels()
-    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
-    for key in keys:
-        assert key in result
-        isinstance(result[key], ClosedInterval)
-
-
-def test_main_validates_humidity():
-    data = {
-        "room": "room-1",
-        "values": {
-            "co2": 0,
-            "temperature": 0,
-            "humidity": 49,
-            "sound": 0,
-            "illumination": 0,
-        },
-    }
-    result = main(data)
-    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
-    assert set(result["alerts"]).issubset(set(all_sensors))
-
-
-def test_sound_settings():
-    result = get_acceptable_sound_levels()
-    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
-    for key in keys:
-        assert key in result
-        isinstance(result[key], ClosedInterval)
-
-
-def test_main_validates_sound():
-    data = {
-        "room": "garden",
-        "values": {
-            "co2": 0,
-            "temperature": 0,
-            "humidity": 0,
-            "sound": 9,
-            "illumination": 0,
-        },
-    }
-    result = main(data)
-    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
-    assert set(result["alerts"]).issubset(set(all_sensors))
-
-
-def test_illumination_settings():
-    result = get_acceptable_illumination_levels()
-    keys = ["activity-room", "refectory", "room-1", "bathroom-main", "garden"]
-    for key in keys:
-        assert key in result
-        isinstance(result[key], ClosedInterval)
-
-
-def test_main_validates_illumination():
-    data = {
-        "room": "bathroom-main",
-        "values": {
-            "co2": 0,
-            "temperature": 0,
-            "humidity": 0,
-            "sound": 0,
-            "illumination": 99,
-        },
-    }
-    result = main(data)
-    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
-    assert set(result["alerts"]).issubset(set(all_sensors))
+    assert set(result["alerts"]) == set(all_sensors)

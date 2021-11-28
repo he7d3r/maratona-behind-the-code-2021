@@ -9,6 +9,38 @@ from src.main import (
 )
 
 
+def test_closed_interval_both_min_and_max():
+    interval = ClosedInterval(min=10, max=20)
+    assert not interval.contains(9.99)
+    assert interval.contains(10)
+    assert interval.contains(15)
+    assert interval.contains(20)
+    assert not interval.contains(20.01)
+
+
+def test_closed_interval_min_only():
+    interval = ClosedInterval(min=10)
+    assert not interval.contains(9.99)
+    assert interval.contains(10)
+    assert interval.contains(15)
+    assert interval.contains(9999)
+
+
+def test_closed_interval_max_only():
+    interval = ClosedInterval(max=20)
+    assert interval.contains(-9999)
+    assert interval.contains(15)
+    assert interval.contains(20)
+    assert not interval.contains(20.01)
+
+
+def test_closed_interval_none():
+    interval = ClosedInterval()
+    assert interval.contains(-9999)
+    assert interval.contains(15)
+    assert interval.contains(9999)
+
+
 def test_main_validates_co2():
     data = {
         "room": "bathroom-main",
@@ -21,16 +53,8 @@ def test_main_validates_co2():
         },
     }
     result = main(data)
-    assert "alerts" in result
-    assert "co2" not in result["alerts"]
-
-    data["values"]["co2"] = 500
-    result = main(data)
-    assert "co2" not in result["alerts"]
-
-    data["values"]["co2"] = 501
-    result = main(data)
-    assert "co2" in result["alerts"]
+    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
+    assert set(result["alerts"]).issubset(set(all_sensors))
 
 
 def test_co2_settings():
@@ -61,20 +85,8 @@ def test_main_validates_temperature():
         },
     }
     result = main(data)
-    assert "alerts" in result
-    assert "temperature" in result["alerts"]
-
-    data["values"]["temperature"] = 20
-    result = main(data)
-    assert "temperature" not in result["alerts"]
-
-    data["values"]["temperature"] = 23
-    result = main(data)
-    assert "temperature" not in result["alerts"]
-
-    data["values"]["temperature"] = 24
-    result = main(data)
-    assert "temperature" in result["alerts"]
+    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
+    assert set(result["alerts"]).issubset(set(all_sensors))
 
 
 def test_humidity_settings():
@@ -97,20 +109,8 @@ def test_main_validates_humidity():
         },
     }
     result = main(data)
-    assert "alerts" in result
-    assert "humidity" in result["alerts"]
-
-    data["values"]["humidity"] = 50
-    result = main(data)
-    assert "humidity" not in result["alerts"]
-
-    data["values"]["humidity"] = 60
-    result = main(data)
-    assert "humidity" not in result["alerts"]
-
-    data["values"]["humidity"] = 61
-    result = main(data)
-    assert "humidity" in result["alerts"]
+    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
+    assert set(result["alerts"]).issubset(set(all_sensors))
 
 
 def test_sound_settings():
@@ -133,20 +133,8 @@ def test_main_validates_sound():
         },
     }
     result = main(data)
-    assert "alerts" in result
-    assert "sound" in result["alerts"]
-
-    data["values"]["sound"] = 10
-    result = main(data)
-    assert "sound" not in result["alerts"]
-
-    data["values"]["sound"] = 35
-    result = main(data)
-    assert "sound" not in result["alerts"]
-
-    data["values"]["sound"] = 36
-    result = main(data)
-    assert "sound" in result["alerts"]
+    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
+    assert set(result["alerts"]).issubset(set(all_sensors))
 
 
 def test_illumination_settings():
@@ -169,17 +157,5 @@ def test_main_validates_illumination():
         },
     }
     result = main(data)
-    assert "alerts" in result
-    assert "illumination" in result["alerts"]
-
-    data["values"]["illumination"] = 100
-    result = main(data)
-    assert "illumination" not in result["alerts"]
-
-    data["values"]["illumination"] = 200
-    result = main(data)
-    assert "illumination" not in result["alerts"]
-
-    data["values"]["illumination"] = 201
-    result = main(data)
-    assert "illumination" in result["alerts"]
+    all_sensors = ["co2", "temperature", "humidity", "sound", "illumination"]
+    assert set(result["alerts"]).issubset(set(all_sensors))

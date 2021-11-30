@@ -7,3 +7,6 @@
 [submodule "2-quanam/desafio"]
 	path = 2-quanam/desafio
 	url = git@github.com:maratonadev/desafio-2-2021.git
+[submodule "3-gft/desafio"]
+	path = 3-gft/desafio
+	url = git@github.com:maratonadev/desafio-3-2021.git

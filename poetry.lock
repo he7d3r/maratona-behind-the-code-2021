@@ -221,6 +221,14 @@ optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
+name = "efficient-apriori"
+version = "2.0.1"
+description = "An efficient Python implementation of the Apriori     algorithm."
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "entrypoints"
 version = "0.3"
 description = "Discover and load entry points from installed packages."
@@ -1264,7 +1272,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "cb24699610f599af291adc2b05a191079f45180b4f600db8eef92460ee56ead4"
+content-hash = "7866a7ee37a3ba4b879dfa193c4182b2cdccc5a5692aafc9a7bb42f3a15c1236"
 
 [metadata.files]
 anyio = [
@@ -1423,6 +1431,10 @@ docutils = [
     {file = "docutils-0.15.2-py2-none-any.whl", hash = "sha256:9e4d7ecfc600058e07ba661411a2b7de2fd0fafa17d1a7f7361cd47b1175c827"},
     {file = "docutils-0.15.2-py3-none-any.whl", hash = "sha256:6c4f696463b79f1fb8ba0c594b63840ebd41f059e92b31957c46b74a4599b6d0"},
     {file = "docutils-0.15.2.tar.gz", hash = "sha256:a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"},
+]
+efficient-apriori = [
+    {file = "efficient_apriori-2.0.1-py3-none-any.whl", hash = "sha256:6b769f68495a49e3110003989094c73a06655cf6022b8ff6fb2f8f51c133e01c"},
+    {file = "efficient_apriori-2.0.1.tar.gz", hash = "sha256:ab0ec6df70c0386d378dc80494393b1403c44f89b5115091cdbb89c066ad1616"},
 ]
 entrypoints = [
     {file = "entrypoints-0.3-py2.py3-none-any.whl", hash = "sha256:589f874b313739ad35be6e0cd7efde2a4e9b6fea91edcc34e58ecbb8dbe56d19"},

@@ -17,6 +17,7 @@ black = "^21.10b0"
 python-dotenv = "^0.19.2"
 cloudant = "^2.15.0"
 pytest = "^6.2.5"
+efficient-apriori = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 

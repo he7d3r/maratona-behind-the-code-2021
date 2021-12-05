@@ -10,3 +10,9 @@
 [submodule "3-gft/desafio"]
 	path = 3-gft/desafio
 	url = git@github.com:maratonadev/desafio-3-2021.git
+[submodule "4-algar-tech/desafio"]
+	path = 4-algar-tech/desafio
+	url = git@github.com:maratonadev/desafio-4-2021.git
+[submodule "5-sonda/desafio"]
+	path = 5-sonda/desafio
+	url = git@github.com:maratonadev/desafio-5-2021.git

@@ -1,0 +1,837 @@
+{
+  "intents": [
+    {
+      "intent": "it_about",
+      "examples": [
+        {
+          "text": "a empresa faz o que?"
+        },
+        {
+          "text": "Em que serviços vocês são especializados?"
+        },
+        {
+          "text": "O que a empresa faz?"
+        },
+        {
+          "text": "O que a Fake IT Solutions faz?"
+        },
+        {
+          "text": "O que tem na Fake IT Solutions?"
+        },
+        {
+          "text": "O que vocês fazem de bom por aí?"
+        },
+        {
+          "text": "Por que alguém recomendaria a empresa Fake IT Solutions?"
+        },
+        {
+          "text": "Por que eu deveria procurar a Fake IT Solutions?"
+        },
+        {
+          "text": "quais os serviços da empresa?"
+        },
+        {
+          "text": "Quais são os serviços oferecidos pela Fake IT Solutions?"
+        },
+        {
+          "text": "Quais são os serviços prestados pela Fake IT Solutions?"
+        },
+        {
+          "text": "Qual é a especialidade da Fake IT Solutions?"
+        },
+        {
+          "text": "Qual é o foco da empresa?"
+        },
+        {
+          "text": "Que benefícios a empresa oferece aos clientes?"
+        },
+        {
+          "text": "Que empresa é essa?"
+        },
+        {
+          "text": "Quem são vocês?"
+        },
+        {
+          "text": "Quero mais detalhes sobre a empresa"
+        },
+        {
+          "text": "Quero saber quais os serviços da empresa?"
+        },
+        {
+          "text": "Serviços da empresa?"
+        }
+      ],
+      "description": "Obter informações sobre a empresa ou serviços"
+    },
+    {
+      "intent": "it_general_problem",
+      "examples": [
+        {
+          "text": "Deu ruim"
+        },
+        {
+          "text": "É com você que falo se eu estiver com um problema?"
+        },
+        {
+          "text": "Estou com dificuldades aqui"
+        },
+        {
+          "text": "Estou com dificuldades para resolver um problema, pode me ajudar?"
+        },
+        {
+          "text": "Estou com problemas"
+        },
+        {
+          "text": "Estou com uma dúvida"
+        },
+        {
+          "text": "Estou com um problema, você pode me ajudar?"
+        },
+        {
+          "text": "Estou tendo problemas e gostaria que alguém me ajudasse a resolver. Você me ajuda?"
+        },
+        {
+          "text": "Poderia resolver um problema que estou tendo?"
+        },
+        {
+          "text": "Preciso de ajuda para resolver um problema"
+        },
+        {
+          "text": "Preciso resolver um problemão urgente aqui"
+        },
+        {
+          "text": "Quero resovler um probleminha"
+        },
+        {
+          "text": "Tem como você me ajudar com um probleminha?"
+        },
+        {
+          "text": "Tem como você resolver um problema para mim?"
+        },
+        {
+          "text": "Tenho um problema"
+        },
+        {
+          "text": "Um probleminha bem rápido"
+        }
+      ],
+      "description": "Informar que tem um problema"
+    },
+    {
+      "intent": "it_local_printer_problem",
+      "examples": [
+        {
+          "text": "A impressora pifou aqui"
+        },
+        {
+          "text": "A impressora que tenho aqui não está funcionando"
+        },
+        {
+          "text": "Arrumar o sistema de impressão"
+        },
+        {
+          "text": "Como atualizar essa impressora?"
+        },
+        {
+          "text": "Como instalo minha impressora nova?"
+        },
+        {
+          "text": "Deu ruim na impressora"
+        },
+        {
+          "text": "É que comprei uma impressora nova e não sei ligar ela"
+        },
+        {
+          "text": "Estou com problemas para usar uma impressora local"
+        },
+        {
+          "text": "É um problema com a impressora"
+        },
+        {
+          "text": "Minha impressora não faz nada"
+        },
+        {
+          "text": "Minha impressora não liga"
+        },
+        {
+          "text": "minha impressora não liga mais"
+        },
+        {
+          "text": "Minha impressora parou de funcionar"
+        },
+        {
+          "text": "Minha impressora quebrou, o que eu faço?"
+        },
+        {
+          "text": "Não consigo mais imprimir aqui nessa impressora"
+        },
+        {
+          "text": "Não dá mais para imprimir"
+        },
+        {
+          "text": "O computador não está reconhecendo minha impressora"
+        },
+        {
+          "text": "Quero ligar minha impressora nova"
+        },
+        {
+          "text": "Quero que minha impressora ligue"
+        },
+        {
+          "text": "Tenho problemas com a impressora do escritório"
+        },
+        {
+          "text": "Tenho um problema com impressão"
+        }
+      ],
+      "description": "Informar problema com impressora"
+    },
+    {
+      "intent": "it_talk_to_human",
+      "examples": [
+        {
+          "text": "Claro, pode sim"
+        },
+        {
+          "text": "Claro, transfere aí"
+        },
+        {
+          "text": "Manda ver"
+        },
+        {
+          "text": "Ok, então quero falar com um atendente"
+        },
+        {
+          "text": "Ok, quero ser atendido por uma pessoa"
+        },
+        {
+          "text": "Ótimo, prefiro falar com uma pessoa"
+        },
+        {
+          "text": "Prefiro falar com um atendente mesmo"
+        },
+        {
+          "text": "Sim, me passe para um humano"
+        },
+        {
+          "text": "Sim, por favor"
+        },
+        {
+          "text": "Sim, quero alguém que resolva meu problema"
+        },
+        {
+          "text": "Sim, quero falar com um humano"
+        },
+        {
+          "text": "Sim, quero um atendente"
+        },
+        {
+          "text": "Sim, transfira"
+        }
+      ],
+      "description": "Concordar em falar com humano"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "printermodel",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "A1201",
+          "synonyms": [
+            "A-1201"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "A1202",
+          "synonyms": [
+            "A-1202"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "A1203",
+          "synonyms": [
+            "A-1203"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "B904",
+          "synonyms": [
+            "B-0904",
+            "B0904",
+            "B-904"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "B905",
+          "synonyms": [
+            "B-0905",
+            "B0905",
+            "B-905"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://help.maratona.dev",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "frame",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Sou o assistente da Fake IT Solutions. Com quem eu falo?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {},
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "Bem-vindo",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1639246042338",
+      "context": {
+        "problema": "true"
+      },
+      "conditions": "true",
+      "event_name": "input",
+      "dialog_node": "handler_10_1639246042382"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1639243415163",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1639243415189",
+      "previous_sibling": "handler_6_1639243415189"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1639243037341",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1639243037341",
+      "previous_sibling": "handler_6_1639243037341"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1639246042338",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1639246042382",
+      "previous_sibling": "handler_10_1639246042382"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1639243037341",
+      "context": {
+        "nome": "true"
+      },
+      "conditions": "true",
+      "event_name": "input",
+      "dialog_node": "handler_6_1639243037341"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1639243415163",
+      "context": {
+        "cidade": "true"
+      },
+      "conditions": "true",
+      "event_name": "input",
+      "dialog_node": "handler_6_1639243415189"
+    },
+    {
+      "type": "standard",
+      "title": "Modelo conhecido",
+      "parent": "node_2_1639228196772",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@printermodel",
+      "dialog_node": "node_10_1639228456414"
+    },
+    {
+      "type": "standard",
+      "title": "Empresa e serviços",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A Fake IT Solutions é uma empresa de informática. No momento estou oferecendo somente ajuda para problemas com impressoras."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1639227830294",
+      "conditions": "#it_about",
+      "dialog_node": "node_10_1639228855528"
+    },
+    {
+      "type": "frame",
+      "title": "Nome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok $nome, qual é a sua cidade?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "Bem-vindo",
+      "context": {
+        "nome": "<? input.text ?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_10_1639241204739"
+    },
+    {
+      "type": "standard",
+      "title": "Não falar com humano",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso te ajudar em algo mais?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1639228532658",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_7_1639227830294"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_10_1639256471762",
+      "previous_sibling": "node_7_1639228609697"
+    },
+    {
+      "type": "standard",
+      "title": "Problema genérico",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Que problema está enfrentando?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1639227830294",
+      "conditions": "#it_general_problem",
+      "dialog_node": "node_1_1639228098634",
+      "previous_sibling": "node_10_1639228855528"
+    },
+    {
+      "type": "standard",
+      "title": "Problema com impressora",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual é o modelo da impressora?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1639227830294",
+      "conditions": "#it_local_printer_problem",
+      "dialog_node": "node_2_1639228196772",
+      "previous_sibling": "node_1_1639228098634"
+    },
+    {
+      "type": "standard",
+      "title": "Problema com impressora local",
+      "parent": "node_1_1639228098634",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1639228196772"
+      },
+      "conditions": "#it_local_printer_problem",
+      "dialog_node": "node_3_1639248290448"
+    },
+    {
+      "type": "standard",
+      "title": "Outro problema",
+      "parent": "node_1_1639228098634",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_4_1639228532658"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_3_1639248344202",
+      "previous_sibling": "node_3_1639248290448"
+    },
+    {
+      "type": "frame",
+      "title": "Outro problema",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Posso te transferir para um atendente humano? Não sei te ajudar com seu problema ($problema)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1639227830294",
+      "context": {
+        "problema": "<? input.text ?>"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_4_1639228532658",
+      "previous_sibling": "node_2_1639228196772"
+    },
+    {
+      "type": "frame",
+      "title": "Cidade",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok $nome de $cidade. Em que posso ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639241204739",
+      "context": {
+        "cidade": "<? input.text ?>"
+      },
+      "conditions": "true",
+      "dialog_node": "node_7_1639227830294"
+    },
+    {
+      "type": "standard",
+      "title": "Falar com humano",
+      "parent": "node_4_1639228532658",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "city": "$cidade",
+            "name": "$nome",
+            "problem": "$problema"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#it_talk_to_human",
+      "dialog_node": "node_7_1639228609697",
+      "previous_sibling": "slot_2_1639246042338"
+    },
+    {
+      "type": "standard",
+      "title": "Outros modelos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Este não é um modelo de impressora que eu conheço."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1639228196772",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1639228532658"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_9_1639247528391",
+      "previous_sibling": "node_10_1639228456414"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o link para o driver da impressora: https://fake.drivers.example.com/printer/B904"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639228456414",
+      "conditions": "@printermodel:B904",
+      "dialog_node": "response_1_1639247355829",
+      "previous_sibling": "response_5_1639247354519"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o link para o driver da impressora: https://fake.drivers.example.com/printer/A1202"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639228456414",
+      "conditions": "@printermodel:A1202",
+      "dialog_node": "response_5_1639247352441",
+      "previous_sibling": "response_8_1639247312918"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o link para o driver da impressora: https://fake.drivers.example.com/printer/A1203"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639228456414",
+      "conditions": "@printermodel:A1203",
+      "dialog_node": "response_5_1639247354519",
+      "previous_sibling": "response_5_1639247352441"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o link para o driver da impressora: https://fake.drivers.example.com/printer/A1201"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639228456414",
+      "conditions": "@printermodel:A1201",
+      "dialog_node": "response_8_1639247312918"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "text": {
+          "values": [
+            "Não há atendentes disponíveis. Você precisará tentar novamente em breve."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_7_1639228609697",
+      "conditions": "anything_else",
+      "dialog_node": "response_8_1639258041343",
+      "previous_sibling": "response_9_1639258039618"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aqui está o link para o driver da impressora: https://fake.drivers.example.com/printer/B905"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1639228456414",
+      "conditions": "@printermodel:B905",
+      "dialog_node": "response_9_1639247357042",
+      "previous_sibling": "response_1_1639247355829"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vou te transferir,  e encerrar a conversação. Aguarde um instante, por favor."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1639228609697",
+      "conditions": "$webhook_result_1.available",
+      "dialog_node": "response_9_1639258039618"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1639241204739",
+      "variable": "nome",
+      "dialog_node": "slot_10_1639243037341",
+      "previous_sibling": "node_7_1639227830294"
+    },
+    {
+      "type": "slot",
+      "parent": "node_4_1639228532658",
+      "variable": "problema",
+      "dialog_node": "slot_2_1639246042338"
+    },
+    {
+      "type": "slot",
+      "parent": "node_7_1639227830294",
+      "variable": "cidade",
+      "dialog_node": "slot_4_1639243415163",
+      "previous_sibling": "node_4_1639228532658"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "Não obrigado"
+    },
+    {
+      "text": "Não sei direito"
+    },
+    {
+      "text": "quero pizza"
+    }
+  ],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "My Fake IT Solutions skill",
+  "language": "pt-br",
+  "description": ""
+}

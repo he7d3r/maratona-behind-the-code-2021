@@ -12,3 +12,7 @@ diálogo de um *chatbot*, utilizando o *Watson Assistent* (ver arquivo
 *processamento de linguagem natural* (*NLP*). O resultado foi um
 *assistente virtual inteligente*, integrado a uma API, capaz de interagir
 com o usuário identificando suas intenções (saudação, pedido de ajuda, etc).
+
+A figura a seguir mostra um diagrama do diálogo construído:
+
+![diagrama do diálogo do assistente virtual](solução/dialog-screenshot.png)

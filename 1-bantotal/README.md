@@ -13,4 +13,10 @@ de bancos e desenvolver um modelo de aprendizagem de máquina para predizer se
 um empréstimo a um cliente deve ou não ser feito. O modelo resultante foi
 publicado em uma instância do *Watson Machine Learning*, e recebeu melhorias
 incrementais até alcançar um bom desempenho. A versão final foi usada para
-preencher o arquivo de respostas, [ANSWERS.csv](solução/ANSWERS.csv).
+preencher o arquivo de respostas, [ANSWERS.csv](solução/ANSWERS.csv),
+garantindo o 6º lugar no
+[ranking do 1º desafio](https://maratona.dev/ranking/1).
+
+No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
+lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
+e a oportunidade de participar da final da Maratona.

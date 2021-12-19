@@ -19,3 +19,10 @@ da *IBM Cloud*, foi utilizado um *Jupyter Notebook* (ver
   do algotimo [Apriori](https://github.com/tommyod/Efficient-Apriori)
 - Preencher o arquivo de respostas, [ANSWERS.csv](solução/ANSWERS.csv), com até
   três produtos por cliente
+
+A solução proposta ficou em 79º lugar no
+[ranking do 3º desafio](https://maratona.dev/ranking/3).
+
+No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
+lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
+e a oportunidade de participar da final da Maratona.

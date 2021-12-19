@@ -16,3 +16,10 @@ com o usuário identificando suas intenções (saudação, pedido de ajuda, etc)
 A figura a seguir mostra um diagrama do diálogo construído:
 
 ![diagrama do diálogo do assistente virtual](solução/dialog-screenshot.png)
+
+A solução proposta ficou em 84º lugar no
+[ranking do 4º desafio](https://maratona.dev/ranking/4).
+
+No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
+lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
+e a oportunidade de participar da final da Maratona.

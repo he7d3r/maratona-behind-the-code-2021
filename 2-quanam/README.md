@@ -20,4 +20,10 @@ explorados em um *Jupyter notebook* (ver [notebook.ipynb](solução/notebook.ipy
 hospedado no *Watson Studio*, com o qual também foram treinados modelos de
 *machine learning* para uma comparação de seu desempenho. O melhor modelo foi
 então utilizado para fazer previsões do ritmo cardíaco de pacientes, e preencher
-a coluna `RYTHM` do arquivo [answers.csv](desafio/assets/answers.csv).
+a coluna `RYTHM` do arquivo [answers.csv](desafio/assets/answers.csv),
+garantindo o 17º lugar no
+[ranking do 2º desafio](https://maratona.dev/ranking/2).
+
+No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
+lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
+e a oportunidade de participar da final da Maratona.

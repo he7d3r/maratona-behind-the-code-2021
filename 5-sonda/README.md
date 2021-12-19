@@ -15,3 +15,10 @@ não a perda de um cliente (_churn_). Os modelos foram comparados, e o que teve
 o melhor desempenho em termos do _F1 score_ foi utilizado para fazer previsões
 para novos clientes e indicar na coluna `CHURN` do arquivo de respostas
 (ver [answers.csv](desafio/assets/answers.csv)) quais deles serão perdidos.
+
+A solução enviada ficou em 96º lugar no
+[ranking do 5º desafio](https://maratona.dev/ranking/5).
+
+No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
+lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
+e a oportunidade de participar da final da Maratona.

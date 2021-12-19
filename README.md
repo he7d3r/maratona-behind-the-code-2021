@@ -12,4 +12,4 @@ No conjunto, as soluções submetidas para os cinco desafios garantiram o 53º
 lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
 e a oportunidade de participar da final da Maratona:
 
-<div align="center"><img width="50%" src="./ranking-maratona.png" alt='TOP 100 da Maratona Behind The Code 2021'></div>
+<div align="center"><img width="80%" src="./ranking-maratona.png" alt='TOP 100 da Maratona Behind The Code 2021'></div>

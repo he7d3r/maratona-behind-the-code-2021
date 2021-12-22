@@ -13,3 +13,7 @@ lugar no [TOP 100 da América Latina](https://maratona.dev/ranking),
 e a oportunidade de participar da final da Maratona:
 
 <div align="center"><img width="80%" src="./ranking-maratona.png" alt='TOP 100 da Maratona Behind The Code 2021'></div>
+
+## Edição anterior
+
+Disponibilizei minhas soluções para os desafios de 2020 no repositório [maratona-behind-the-code-2020](https://github.com/he7d3r/maratona-behind-the-code-2020).

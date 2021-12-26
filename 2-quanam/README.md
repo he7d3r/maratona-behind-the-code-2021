@@ -10,7 +10,10 @@ Para a solução do desafio na plataforma da *IBM Cloud*:
 
 1. Foi utilizado o *Cloud Functions* para criar uma API *serverless* que recebe
 dados de sensores e retorna uma lista de alertas quando as medições de um ou
-mais destes sensores alcançam valores diferentes do esperado.
+mais destes sensores alcançam valores diferentes do esperado. O diretório
+*[sensor_alert](solução/sensor_alert)* contém o
+[código da *Action* que define a API](solução/sensor_alert/src/main.py) e
+[alguns testes unitários](solução/sensor_alert/tests/test_main.py).
 2. Com o *Node-RED* (ver [node-red-flows.json](solução/node-red-flows.json)),
 foram coletados documentos em formato JSON de um dispositivo IOT da Quanam, via
 protocolo MQTT, para posterior armazenamento em um banco de dados *NoSQL*

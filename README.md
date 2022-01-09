@@ -18,7 +18,7 @@ e a oportunidade de participar da final da Maratona:
 
 ### Bantotal
 
-O desafio proposto pela Bantotal encontra-se no diretório [1-bantotal/desafio](1-bantotal/desafio).
+O [desafio proposto pela Bantotal](https://github.com/maratonadev/desafio-1-2021) encontra-se no submódulo "1-bantotal/desafio".
 
 Para a solução deste desafio de ciência de dados na plataforma da *IBM Cloud*,
 foi utilizado um *Jupyter Notebook*, hospedado no *Watson Studio*
@@ -33,7 +33,7 @@ garantindo o 6º lugar no
 
 ### Quanam
 
-O desafio proposto pela Quanam encontra-se no diretório [2-quanam/desafio](2-quanam/desafio).
+O [desafio proposto pela Quanam](https://github.com/maratonadev/desafio-2-2021) encontra-se no submódulo "2-quanam/desafio".
 
 Para a solução do desafio na plataforma da *IBM Cloud*:
 
@@ -52,13 +52,13 @@ explorados em um *Jupyter notebook* (ver [notebook.ipynb](2-quanam/solução/not
 hospedado no *Watson Studio*, com o qual também foram treinados modelos de
 *machine learning* para uma comparação de seu desempenho. O melhor modelo foi
 então utilizado para fazer previsões do ritmo cardíaco de pacientes, e preencher
-a coluna `RYTHM` do arquivo [answers.csv](2-quanam/desafio/assets/answers.csv),
+a coluna `RYTHM` do arquivo [answers.csv](2-quanam/solução/answers.csv),
 garantindo o 17º lugar no
 [ranking do 2º desafio](https://maratona.dev/ranking/2).
 
 ### GFT
 
-O desafio proposto pela GFT encontra-se no diretório [3-gft/desafio](3-gft/desafio).
+O [desafio proposto pela GFT](https://github.com/maratonadev/desafio-3-2021) encontra-se no submódulo "3-gft/desafio".
 
 Para a solução deste desafio de aprendizagem não-supervisionada na plataforma
 da *IBM Cloud*, foi utilizado um *Jupyter Notebook* (ver
@@ -79,7 +79,7 @@ A solução proposta ficou em 79º lugar no
 
 ### Algar Tech
 
-O desafio proposto pela Algar Tech encontra-se no diretório [4-algar-tech/desafio](4-algar-tech/desafio).
+O [desafio proposto pela Algar Tech](https://github.com/maratonadev/desafio-4-2021) encontra-se no submódulo "4-algar-tech/desafio".
 
 Para a solução do desafio na plataforma da *IBM Cloud*, foi construído o
 diálogo de um *chatbot*, utilizando o *Watson Assistent* (ver arquivo
@@ -97,17 +97,17 @@ A solução proposta ficou em 84º lugar no
 
 ### Sonda
 
-O desafio proposto pela SONDA encontra-se no diretório [5-sonda/desafio](5-sonda/desafio).
+O [desafio proposto pela SONDA](https://github.com/maratonadev/desafio-5-2021) encontra-se no submódulo "5-sonda/desafio".
 
 Para a solução deste desafio de ciência de dados na plataforma da *IBM Cloud*,
 foi utilizado um *Jupyter Notebook*, hospedado no *Watson Studio*
 (ver [notebook.ipynb](5-sonda/solução/notebook.ipynb)), para analisar dados de clientes
-de uma empresa de telecomunicações (ver [dataset.csv](5-sonda/desafio/assets/data/dataset.csv))
+de uma empresa de telecomunicações (ver [dataset.csv](https://github.com/maratonadev/desafio-5-2021/blob/main/assets/data/dataset.csv))
 e desenvolver modelos de aprendizagem de máquina para predizer se haverá ou
 não a perda de um cliente (_churn_). Os modelos foram comparados, e o que teve
 o melhor desempenho em termos do _F1 score_ foi utilizado para fazer previsões
 para novos clientes e indicar na coluna `CHURN` do arquivo de respostas
-(ver [ANSWERS.csv](5-sonda/desafio/assets/data/ANSWERS.csv)) quais deles serão perdidos.
+(ver [ANSWERS.csv](5-sonda/solução/ANSWERS.csv)) quais deles serão perdidos.
 
 A solução enviada ficou em 96º lugar no
 [ranking do 5º desafio](https://maratona.dev/ranking/5).
